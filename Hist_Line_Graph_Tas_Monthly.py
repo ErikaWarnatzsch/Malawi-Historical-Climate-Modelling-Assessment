@@ -914,6 +914,9 @@ def main():
     plt.xticks(range(12), calendar.month_abbr[0:12]) 
     
     #assign the line colours and set x axis to 'month' rather than 'time'
+    plt.plot(X,CRUE_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelE_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUE_mean.data,UDelE_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCma_mean.coord('month_number'), CCCma_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcom_mean.coord('month_number'), CLMcom_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMI_mean.coord('month_number'), DMI_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -945,7 +948,10 @@ def main():
     #set x-axis ticks                                                                                            
     plt.xticks(range(12), calendar.month_abbr[0:12])
     
-    #assign the line colours and set x axis to 'month' rather than 'time'        
+    #assign the line colours and set x axis to 'month' rather than 'time'       
+    plt.plot(X,CRU_mean.data, lw=1, color='grey')
+    plt.plot(X,UDel_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRU_mean.data,UDel_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCM_mean.coord('month_number'), CCCmaCanRCM_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHI_mean.coord('month_number'), CCCmaSMHI_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRM_mean.coord('month_number'), CNRM_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -992,7 +998,10 @@ def main():
     #set x-axis ticks                                                                                            
     plt.xticks(range(12), calendar.month_abbr[0:12])
     
-    #assign the line colours and set x axis to 'month' rather than 'time'        
+    #assign the line colours and set x axis to 'month' rather than 'time'       
+    plt.plot(X,CRU_mean.data, lw=1, color='grey')
+    plt.plot(X,UDel_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRU_mean.data,UDel_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2_mean.coord('month_number'), CanESM2_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMG_mean.coord('month_number'), CNRMG_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3_mean.coord('month_number'), MK3_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -1029,7 +1038,10 @@ def main():
     #set x-axis ticks                                                                                            
     plt.xticks(range(12), calendar.month_abbr[0:12])
     
-    #assign the line colours and set x axis to 'month' rather than 'time'        
+    #assign the line colours and set x axis to 'month' rather than 'time'       
+    plt.plot(X,CRU_mean.data, lw=1, color='grey')
+    plt.plot(X,UDel_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRU_mean.data,UDel_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsY, label='Observed', lw=3, color='black')
     plt.plot(X, AverageRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageGY, label='Average GCM', lw=1.5, color='magenta') 
