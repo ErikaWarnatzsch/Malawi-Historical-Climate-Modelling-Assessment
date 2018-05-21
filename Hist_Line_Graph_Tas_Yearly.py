@@ -1724,6 +1724,9 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUESON_mean.data, lw=1, color='grey')
+    plt.plot(XE,UDelESON_mean.data, lw=1, color='grey')
+    plt.fill_between(XE,CRUESON_mean.data,UDelESON_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaSON_mean.coord('year'), CCCmaSON_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomSON_mean.coord('year'), CLMcomSON_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMISON_mean.coord('year'), DMISON_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1755,6 +1758,9 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUEDJF_mean.data, lw=1, color='grey')
+    plt.plot(XE,UDelEDJF_mean.data, lw=1, color='grey')
+    plt.fill_between(XE,CRUEDJF_mean.data,UDelEDJF_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaDJF_mean.coord('year'), CCCmaDJF_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomDJF_mean.coord('year'), CLMcomDJF_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMIDJF_mean.coord('year'), DMIDJF_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1786,6 +1792,9 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUEMAM_mean.data, lw=1, color='grey')
+    plt.plot(XE,UDelEMAM_mean.data, lw=1, color='grey')
+    plt.fill_between(XE,CRUEMAM_mean.data,UDelEMAM_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaMAM_mean.coord('year'), CCCmaMAM_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomMAM_mean.coord('year'), CLMcomMAM_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMIMAM_mean.coord('year'), DMIMAM_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1817,6 +1826,9 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUEJJA_mean.data, lw=1, color='grey')
+    plt.plot(XE,UDelEJJA_mean.data, lw=1, color='grey')
+    plt.fill_between(XE,CRUEJJA_mean.data,UDelEJJA_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaJJA_mean.coord('year'), CCCmaJJA_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomJJA_mean.coord('year'), CLMcomJJA_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMIJJA_mean.coord('year'), DMIJJA_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1848,6 +1860,9 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUEYR_mean.data, lw=1, color='grey')
+    plt.plot(XE,UDelEYR_mean.data, lw=1, color='grey')
+    plt.fill_between(XE,CRUEYR_mean.data,UDelEYR_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaYR_mean.coord('year'),CCCmaYR_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomYR_mean.coord('year'), CLMcomYR_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMIYR_mean.coord('year'), DMIYR_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1880,6 +1895,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUSON_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelSON_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMSON_mean.coord('year'), CCCmaCanRCMSON_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHISON_mean.coord('year'), CCCmaSMHISON_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMSON_mean.coord('year'), CNRMSON_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -1926,6 +1944,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUDJF_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelDJF_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMDJF_mean.coord('year'), CCCmaCanRCMDJF_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHIDJF_mean.coord('year'), CCCmaSMHIDJF_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMDJF_mean.coord('year'), CNRMDJF_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -1972,6 +1993,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUMAM_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelMAM_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMMAM_mean.coord('year'), CCCmaCanRCMMAM_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHIMAM_mean.coord('year'), CCCmaSMHIMAM_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMMAM_mean.coord('year'), CNRMMAM_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -2018,6 +2042,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUJJA_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelJJA_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMJJA_mean.coord('year'), CCCmaCanRCMJJA_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHIJJA_mean.coord('year'), CCCmaSMHIJJA_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMJJA_mean.coord('year'), CNRMJJA_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -2064,6 +2091,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUYR_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelYR_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMYR_mean.coord('year'), CCCmaCanRCMYR_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHIYR_mean.coord('year'), CCCmaSMHIYR_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMYR_mean.coord('year'), CNRMYR_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -2111,6 +2141,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUSON_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelSON_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2SON_mean.coord('year'), CanESM2SON_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGSON_mean.coord('year'), CNRMGSON_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3SON_mean.coord('year'), MK3SON_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2147,6 +2180,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUDJF_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelDJF_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2DJF_mean.coord('year'), CanESM2DJF_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGDJF_mean.coord('year'), CNRMGDJF_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3DJF_mean.coord('year'), MK3DJF_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2183,6 +2219,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUMAM_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelMAM_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2MAM_mean.coord('year'), CanESM2MAM_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGMAM_mean.coord('year'), CNRMGMAM_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3MAM_mean.coord('year'), MK3MAM_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2219,6 +2258,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUJJA_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelJJA_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2JJA_mean.coord('year'), CanESM2JJA_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGJJA_mean.coord('year'), CNRMGJJA_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3JJA_mean.coord('year'), MK3JJA_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2255,6 +2297,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUYR_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelYR_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2YR_mean.coord('year'), CanESM2YR_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGYR_mean.coord('year'), CNRMGYR_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3YR_mean.coord('year'), MK3YR_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2292,6 +2337,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUSON_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelSON_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsSONY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageSONRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageSONGY, label='Average GCM', lw=1.5, color='magenta')
@@ -2318,6 +2366,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUDJF_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelDJF_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsDJFY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageDJFRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageDJFGY, label='Average GCM', lw=1.5, color='magenta')
@@ -2344,6 +2395,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUMAM_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelMAM_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsMAMY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageMAMRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageMAMGY, label='Average GCM', lw=1.5, color='magenta')
@@ -2370,6 +2424,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUJJA_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelJJA_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsJJAY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageJJARY, label='AverageRCM', lw=1.5, color='cyan')
     plt.plot(X, AverageJJAGY, label='Average GCM', lw=1.5, color='magenta')
@@ -2396,6 +2453,9 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUYR_mean.data, lw=1, color='grey')
+    plt.plot(X,UDelYR_mean.data, lw=1, color='grey')
+    plt.fill_between(X,CRUYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageGY, label='Average GCM', lw=1.5, color='magenta')
