@@ -4,7 +4,7 @@ Created on Wednesday August 2 2017
 @author: s0899345
 
 Taylor Diagram (Taylor, 2001) code from "Yannick Copin <yannick.copin@laposte.net>". This code was put in to the public domain and accessed from https://gist.github.com/ycopin/3342888
-with "Time-stamp: <2017-11-20 17:36:41 ycopin>" 
+with "Time-stamp: <2018-05-17 19:41:54 ycopin>" 
 
 """
 
@@ -13,7 +13,7 @@ import iris.coord_categorisation as iriscc
 import iris.analysis.cartography
 import numpy as np
 import matplotlib.pyplot as PLT
-from Taylor_Diagram_Template_YC import TaylorDiagram
+from Taylor_Diagram_Template_YC3 import TaylorDiagram
 from cf_units import Unit
 import math
 
