@@ -912,6 +912,12 @@ def main():
     plt.xticks(range(12), calendar.month_abbr[0:12])
     
     #assign the line colours and set x axis to 'month' rather than 'time'       
+    plt.plot(X,CRU_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDel_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCC_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRU_mean.data,UDel_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRU_mean.data,GPCC_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCC_mean.data,UDel_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsY, label='Observed', lw=3, color='black')
     plt.plot(X, AverageRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageGY, label='Average GCM', lw=1.5, color='magenta') 
