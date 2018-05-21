@@ -1709,6 +1709,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUSON_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelSON_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCSON_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUSON_mean.data,GPCCSON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsSONY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageSONRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageSONGY, label='Average GCM', lw=1.5, color='magenta')
@@ -1736,6 +1742,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUDJF_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelDJF_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCDJF_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUDJF_mean.data,GPCCDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsDJFY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageDJFRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageDJFGY, label='Average GCM', lw=1.5, color='magenta')
@@ -1763,6 +1775,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUMAM_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelMAM_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCMAM_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUMAM_mean.data,GPCCMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsMAMY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageMAMRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageMAMGY, label='Average GCM', lw=1.5, color='magenta')
@@ -1790,6 +1808,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUJJA_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelJJA_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCJJA_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUJJA_mean.data,GPCCJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsJJAY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageJJARY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageJJAGY, label='Average GCM', lw=1.5, color='magenta')
@@ -1817,6 +1841,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUYR_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelYR_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCYR_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUYR_mean.data,GPCCYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageGY, label='Average GCM', lw=1.5, color='magenta')
@@ -1840,10 +1870,12 @@ def main():
     #show the graph in the console
     iplt.show()
     
-    print ObsY
-    print AverageRY
-    print AverageGY
-    print AverageEY
+
+#     print ObsY
+#     print AverageRY
+#     print AverageGY
+#     print AverageEY
+
     
 if __name__ == '__main__':
     main()
