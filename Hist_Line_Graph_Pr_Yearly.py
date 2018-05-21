@@ -13,6 +13,7 @@ import iris.analysis.cartography
 import numpy as np
 import cf_units
 import datetime
+from scipy import stats 
 
 #this file is split into parts as follows:
     #PART 1: load and format all models 
@@ -1786,6 +1787,12 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUESON_mean.data, lw=1, color='grey')   
+    plt.plot(XE,UDelESON_mean.data, lw=1, color='grey')
+    plt.plot(XE,GPCCESON_mean.data, lw=1, color='grey') 
+    plt.fill_between(XE,CRUESON_mean.data,UDelESON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,CRUESON_mean.data,GPCCESON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,GPCCESON_mean.data,UDelESON_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaSON_mean.coord('year'), CCCmaSON_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomSON_mean.coord('year'), CLMcomSON_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMISON_mean.coord('year'), DMISON_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1817,6 +1824,12 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUEDJF_mean.data, lw=1, color='grey')   
+    plt.plot(XE,UDelEDJF_mean.data, lw=1, color='grey')
+    plt.plot(XE,GPCCEDJF_mean.data, lw=1, color='grey') 
+    plt.fill_between(XE,CRUEDJF_mean.data,UDelEDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,CRUEDJF_mean.data,GPCCEDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,GPCCEDJF_mean.data,UDelEDJF_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaDJF_mean.coord('year'), CCCmaDJF_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomDJF_mean.coord('year'), CLMcomDJF_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMIDJF_mean.coord('year'), DMIDJF_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1848,6 +1861,12 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUEMAM_mean.data, lw=1, color='grey')   
+    plt.plot(XE,UDelEMAM_mean.data, lw=1, color='grey')
+    plt.plot(XE,GPCCEMAM_mean.data, lw=1, color='grey') 
+    plt.fill_between(XE,CRUEMAM_mean.data,UDelEMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,CRUEMAM_mean.data,GPCCEMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,GPCCEMAM_mean.data,UDelEMAM_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaMAM_mean.coord('year'), CCCmaMAM_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomMAM_mean.coord('year'), CLMcomMAM_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMIMAM_mean.coord('year'), DMIMAM_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1879,6 +1898,12 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUEJJA_mean.data, lw=1, color='grey')   
+    plt.plot(XE,UDelEJJA_mean.data, lw=1, color='grey')
+    plt.plot(XE,GPCCEJJA_mean.data, lw=1, color='grey') 
+    plt.fill_between(XE,CRUEJJA_mean.data,UDelEJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,CRUEJJA_mean.data,GPCCEJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,GPCCEJJA_mean.data,UDelEJJA_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaJJA_mean.coord('year'), CCCmaJJA_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomJJA_mean.coord('year'), CLMcomJJA_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMIJJA_mean.coord('year'), DMIJJA_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1910,6 +1935,12 @@ def main():
     plt.xlim((1990,2008)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(XE,CRUEYR_mean.data, lw=1, color='grey')   
+    plt.plot(XE,UDelEYR_mean.data, lw=1, color='grey')
+    plt.plot(XE,GPCCEYR_mean.data, lw=1, color='grey') 
+    plt.fill_between(XE,CRUEYR_mean.data,UDelEYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,CRUEYR_mean.data,GPCCEYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(XE,GPCCEYR_mean.data,UDelEYR_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaYR_mean.coord('year'),CCCmaYR_mean, label='CanRCM4_ERAINT', lw=1.5, color='blue')
     qplt.plot(CLMcomYR_mean.coord('year'), CLMcomYR_mean, label='CCLM4-8-17_ERAINT', lw=1.5, color='green')
     qplt.plot(DMIYR_mean.coord('year'), DMIYR_mean, label='HIRHAM5_ERAINT', lw=1.5, color='red')
@@ -1942,6 +1973,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUSON_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelSON_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCSON_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUSON_mean.data,GPCCSON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMSON_mean.coord('year'), CCCmaCanRCMSON_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHISON_mean.coord('year'), CCCmaSMHISON_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMSON_mean.coord('year'), CNRMSON_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -1988,6 +2025,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUDJF_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelDJF_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCDJF_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUDJF_mean.data,GPCCDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMDJF_mean.coord('year'), CCCmaCanRCMDJF_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHIDJF_mean.coord('year'), CCCmaSMHIDJF_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMDJF_mean.coord('year'), CNRMDJF_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -2034,6 +2077,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUMAM_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelMAM_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCMAM_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUMAM_mean.data,GPCCMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMMAM_mean.coord('year'), CCCmaCanRCMMAM_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHIMAM_mean.coord('year'), CCCmaSMHIMAM_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMMAM_mean.coord('year'), CNRMMAM_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -2080,6 +2129,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUJJA_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelJJA_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCJJA_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUJJA_mean.data,GPCCJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMJJA_mean.coord('year'), CCCmaCanRCMJJA_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHIJJA_mean.coord('year'), CCCmaSMHIJJA_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMJJA_mean.coord('year'), CNRMJJA_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -2126,6 +2181,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUYR_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelYR_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCYR_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUYR_mean.data,GPCCYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
     qplt.plot(CCCmaCanRCMYR_mean.coord('year'), CCCmaCanRCMYR_mean, label='CanRCM4_CanESM2', lw=1.5, color='blue')
     qplt.plot(CCCmaSMHIYR_mean.coord('year'), CCCmaSMHIYR_mean, label='RCA4_CanESM2', lw=1.5, color='green')
     qplt.plot(CNRMYR_mean.coord('year'), CNRMYR_mean, label='CCLM4-8-17_CNRM-CM5', lw=1.5, color='red')
@@ -2173,6 +2234,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUSON_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelSON_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCSON_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUSON_mean.data,GPCCSON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2SON_mean.coord('year'), CanESM2SON_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGSON_mean.coord('year'), CNRMGSON_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3SON_mean.coord('year'), MK3SON_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2209,6 +2276,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUDJF_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelDJF_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCDJF_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUDJF_mean.data,GPCCDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2DJF_mean.coord('year'), CanESM2DJF_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGDJF_mean.coord('year'), CNRMGDJF_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3DJF_mean.coord('year'), MK3DJF_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2245,6 +2318,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUMAM_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelMAM_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCMAM_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUMAM_mean.data,GPCCMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2MAM_mean.coord('year'), CanESM2MAM_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGMAM_mean.coord('year'), CNRMGMAM_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3MAM_mean.coord('year'), MK3MAM_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2281,6 +2360,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUJJA_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelJJA_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCJJA_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUJJA_mean.data,GPCCJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2JJA_mean.coord('year'), CanESM2JJA_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGJJA_mean.coord('year'), CNRMGJJA_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3JJA_mean.coord('year'), MK3JJA_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2317,6 +2402,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUYR_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelYR_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCYR_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUYR_mean.data,GPCCYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
     qplt.plot(CanESM2YR_mean.coord('year'), CanESM2YR_mean, label='CanESM2', lw=1.5, color='blue')
     qplt.plot(CNRMGYR_mean.coord('year'), CNRMGYR_mean, label='CNRM_CM5', lw=1.5, color='green')
     qplt.plot(MK3YR_mean.coord('year'), MK3YR_mean, label='CSIRO MK3-6-0', lw=1.5, color='red')
@@ -2354,6 +2445,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUSON_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelSON_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCSON_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUSON_mean.data,GPCCSON_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCSON_mean.data,UDelSON_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsSONY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageSONRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageSONGY, label='Average GCM', lw=1.5, color='magenta')
@@ -2380,6 +2477,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUDJF_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelDJF_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCDJF_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUDJF_mean.data,GPCCDJF_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCDJF_mean.data,UDelDJF_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsDJFY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageDJFRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageDJFGY, label='Average GCM', lw=1.5, color='magenta')
@@ -2406,6 +2509,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUMAM_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelMAM_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCMAM_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUMAM_mean.data,GPCCMAM_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCMAM_mean.data,UDelMAM_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsMAMY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageMAMRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageMAMGY, label='Average GCM', lw=1.5, color='magenta')
@@ -2432,6 +2541,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUJJA_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelJJA_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCJJA_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUJJA_mean.data,GPCCJJA_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCJJA_mean.data,UDelJJA_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsJJAY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageJJARY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageJJAGY, label='Average GCM', lw=1.5, color='magenta')
@@ -2458,6 +2573,12 @@ def main():
     plt.xlim((1961,2005)) 
     
     #assign the line colours and set x axis to 'year' rather than 'time'
+    plt.plot(X,CRUYR_mean.data, lw=1, color='grey')   
+    plt.plot(X,UDelYR_mean.data, lw=1, color='grey')
+    plt.plot(X,GPCCYR_mean.data, lw=1, color='grey') 
+    plt.fill_between(X,CRUYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,CRUYR_mean.data,GPCCYR_mean.data, color='grey', alpha='0.5')
+    plt.fill_between(X,GPCCYR_mean.data,UDelYR_mean.data, color='grey', alpha='0.5')
     plt.plot(X, ObsY, label='Observed', lw=1.5, color='black')
     plt.plot(X, AverageRY, label='Average RCM', lw=1.5, color='cyan')
     plt.plot(X, AverageGY, label='Average GCM', lw=1.5, color='magenta')
@@ -2479,8 +2600,463 @@ def main():
 
     #show the graph in the console
     iplt.show()
-    
-    
+
+#    print "YR"    
+#    slope = stats.linregress(XE, ObsEY)
+#    print slope
+#    slope = stats.linregress(X, ObsY)
+#    print slope
+#    print "ERAINT"
+#    slope = stats.linregress(XE,CCCmaYR_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,CLMcomYR_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,DMIYR_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,KNMIYR_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,MPIEYR_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,SMHIYR_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,AverageEY)
+#    print slope
+#    print "RCMT"
+#    slope = stats.linregress(X,CCCmaCanRCMYR_mean.data)
+#    print slope
+#    slope = stats.linregress(X,CCCmaSMHIYR_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CNRMYR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMSMHIYR_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CSIROYR_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECDMIYR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,ICHECCCLMYR_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECKNMIYR_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,ICHECMPIYR_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,ICHECSMHIYR_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,IPSLYR_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MIROCYR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MOHCCCLMYR_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MOHCKNMIYR_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MOHCSMHIYR_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MPICCLMYR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MPIREMOYR_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPISMHIYR_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCDMIYR_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCSMHIYR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,NOAAYR_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,AverageRY)
+#    print slope
+#    print "GCM"
+#    slope = stats.linregress(X,CanESM2YR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMGYR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MK3YR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTHYR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTH3YR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,GFDLYR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,HadGEM2YR_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,IPSLGYR_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MIROCGYR_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPIYR_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,NorESM1YR_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,AverageGY)
+#    print slope
+#      
+#    print "DJF"    
+#    slope = stats.linregress(XE, ObsEDJFY)
+#    print slope
+#    slope = stats.linregress(X, ObsDJFY)
+#    print slope
+#    print "ERAINT"
+#    slope = stats.linregress(XE,CCCmaDJF_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,CLMcomDJF_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,DMIDJF_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,KNMIDJF_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,MPIEDJF_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,SMHIDJF_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,AverageDJFEY)
+#    print slope
+#    print "RCMT"
+#    slope = stats.linregress(X,CCCmaCanRCMDJF_mean.data)
+#    print slope
+#    slope = stats.linregress(X,CCCmaSMHIDJF_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CNRMDJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMSMHIDJF_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CSIRODJF_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECDMIDJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,ICHECCCLMDJF_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECKNMIDJF_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,ICHECMPIDJF_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,ICHECSMHIDJF_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,IPSLDJF_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MIROCDJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MOHCCCLMDJF_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MOHCKNMIDJF_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MOHCSMHIDJF_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MPICCLMDJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MPIREMODJF_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPISMHIDJF_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCDMIDJF_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCSMHIDJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,NOAADJF_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,AverageDJFRY)
+#    print slope
+#    print "GCM"
+#    slope = stats.linregress(X,CanESM2DJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMGDJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MK3DJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTHDJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTH3DJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,GFDLDJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,HadGEM2DJF_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,IPSLGDJF_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MIROCGDJF_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPIDJF_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,NorESM1DJF_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,AverageDJFGY)
+#    print slope
+#
+#    print "MAM"    
+#    slope = stats.linregress(XE, ObsEMAMY)
+#    print slope
+#    slope = stats.linregress(X, ObsMAMY)
+#    print slope
+#    print "ERAINT"
+#    slope = stats.linregress(XE,CCCmaMAM_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,CLMcomMAM_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,DMIMAM_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,KNMIMAM_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,MPIEMAM_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,SMHIMAM_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,AverageMAMEY)
+#    print slope
+#    print "RCMT"
+#    slope = stats.linregress(X,CCCmaCanRCMMAM_mean.data)
+#    print slope
+#    slope = stats.linregress(X,CCCmaSMHIMAM_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CNRMMAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMSMHIMAM_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CSIROMAM_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECDMIMAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,ICHECCCLMMAM_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECKNMIMAM_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,ICHECMPIMAM_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,ICHECSMHIMAM_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,IPSLMAM_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MIROCMAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MOHCCCLMMAM_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MOHCKNMIMAM_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MOHCSMHIMAM_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MPICCLMMAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MPIREMOMAM_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPISMHIMAM_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCDMIMAM_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCSMHIMAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,NOAAMAM_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,AverageMAMRY)
+#    print slope
+#    print "GCM"
+#    slope = stats.linregress(X,CanESM2MAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMGMAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MK3MAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTHMAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTH3MAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,GFDLMAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,HadGEM2MAM_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,IPSLGMAM_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MIROCGMAM_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPIMAM_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,NorESM1MAM_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,AverageMAMGY)
+#    print slope
+#
+#    print "JJA"    
+#    slope = stats.linregress(XE, ObsEJJAY)
+#    print slope
+#    slope = stats.linregress(X, ObsJJAY)
+#    print slope
+#    print "ERAINT"
+#    slope = stats.linregress(XE,CCCmaJJA_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,CLMcomJJA_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,DMIJJA_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,KNMIJJA_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,MPIEJJA_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,SMHIJJA_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,AverageJJAEY)
+#    print slope
+#    print "RCMT"
+#    slope = stats.linregress(X,CCCmaCanRCMJJA_mean.data)
+#    print slope
+#    slope = stats.linregress(X,CCCmaSMHIJJA_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CNRMJJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMSMHIJJA_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CSIROJJA_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECDMIJJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,ICHECCCLMJJA_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECKNMIJJA_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,ICHECMPIJJA_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,ICHECSMHIJJA_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,IPSLJJA_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MIROCJJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MOHCCCLMJJA_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MOHCKNMIJJA_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MOHCSMHIJJA_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MPICCLMJJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MPIREMOJJA_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPISMHIJJA_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCDMIJJA_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCSMHIJJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,NOAAJJA_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,AverageJJARY)
+#    print slope
+#    print "GCM"
+#    slope = stats.linregress(X,CanESM2JJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMGJJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MK3JJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTHJJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTH3JJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,GFDLJJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,HadGEM2JJA_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,IPSLGJJA_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MIROCGJJA_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPIJJA_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,NorESM1JJA_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,AverageJJAGY)
+#    print slope
+#
+#    print "SON"    
+#    slope = stats.linregress(XE, ObsESONY)
+#    print slope
+#    slope = stats.linregress(X, ObsSONY)
+#    print slope
+#    print "ERAINT"
+#    slope = stats.linregress(XE,CCCmaSON_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,CLMcomSON_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,DMISON_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,KNMISON_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,MPIESON_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,SMHISON_mean.data)
+#    print slope
+#    slope = stats.linregress(XE,AverageSONEY)
+#    print slope
+#    print "RCMT"
+#    slope = stats.linregress(X,CCCmaCanRCMSON_mean.data)
+#    print slope
+#    slope = stats.linregress(X,CCCmaSMHISON_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CNRMSON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMSMHISON_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,CSIROSON_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECDMISON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,ICHECCCLMSON_mean.data)
+#    print slope 
+#    slope = stats.linregress(X,ICHECKNMISON_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,ICHECMPISON_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,ICHECSMHISON_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,IPSLSON_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MIROCSON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MOHCCCLMSON_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,MOHCKNMISON_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MOHCSMHISON_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MPICCLMSON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MPIREMOSON_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPISMHISON_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCDMISON_mean.data)
+#    print slope    
+#    slope = stats.linregress(X,NCCSMHISON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,NOAASON_mean.data)
+#    print slope      
+#    slope = stats.linregress(X,AverageSONRY)
+#    print slope
+#    print "GCM"
+#    slope = stats.linregress(X,CanESM2SON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,CNRMGSON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,MK3SON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTHSON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,EARTH3SON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,GFDLSON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,HadGEM2SON_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,IPSLGSON_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,MIROCGSON_mean.data)
+#    print slope     
+#    slope = stats.linregress(X,MPISON_mean.data)
+#    print slope   
+#    slope = stats.linregress(X,NorESM1SON_mean.data)
+#    print slope  
+#    slope = stats.linregress(X,AverageSONGY)
+#    print slope
+
+
 if __name__ == '__main__':
     main()
     
