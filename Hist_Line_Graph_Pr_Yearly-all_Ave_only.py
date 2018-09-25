@@ -611,7 +611,7 @@ def main():
     UDel = UDel.extract(Malawi)
     GPCC = GPCC.extract(Malawi)
     
-    #time constraignt to make all series the same, for ERAINT this is 1990-2008 and for RCMs and GCMs this is 1961-2005
+    #time constraignt to make all series the same, for ERAINT this is 1990-2005 and for RCMs and GCMs this is 1961-2005
     iris.FUTURE.cell_datetime_objects = True
     t_constraint_ERAINT = iris.Constraint(time=lambda cell: 1990 <= cell.point.year <= 2005)
    
@@ -1727,7 +1727,7 @@ def main():
     plt.legend(loc="upper center", bbox_to_anchor=(0.5,-0.05), fancybox=True, shadow=True, ncol=2)
     
     #create a title
-    plt.title('Pr for Malawi SON 1961-2008', fontsize=11)   
+    plt.title('Pr for Malawi SON 1961-2005', fontsize=11)   
     
     #add grid lines
     plt.grid()
